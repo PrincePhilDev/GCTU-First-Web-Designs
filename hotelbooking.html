@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="page for Hotel-booking">
+    <meta http-equiv="refresh" content="10000">
+    <meta name="robot" content="index,follow">
+    <meta name="author" content="Prince Philip">
+    <title>Hotel-booking</title>
+</head>
+<style>
+    body{
+        background-color: rgb(151, 106, 50); 
+    }
+    
+</style>
+<body>
+    <hr>
+    <div style="text-align: center;">
+    <img src="room1.jpeg" alt="room1" height="100px" width="200px">
+      <img src="room3.jpeg" alt="room3" height="100px" width="200px"><hr>
+    <h1><b>Hotel Booking
+    </b></h1>
+    <h4>Experience something every moment!</h4>
+</div>
+    
+
+<hr>
+    <label for="name"><h3><b>Name</b></h3>
+        <input type="text" id="name" placeholder="First" style="width: 215px; height:30px; display:inline-block;">
+          <input type="text" id="name" placeholder="Last" style="width: 215px;height:30px; display:inline-block;">
+    </label>
+    <br><br>
+    <label for="email"><h3><b>Email</b></h3>
+        <input type="text" id="email" placeholder="ex:myname@gmail.com" style="width:445px; height:30px">
+    </label>
+    <br> <br><hr>
+     <label for="room"><h3><b>Room type</b></h3>
+        <select name="room" id="room" style="width:455px; height: 30px ;">
+        <option>ROOM 1</option>
+            <option>ROOM 2</option>
+            <option>ROOM 3</option>
+        </select>
+    
+        </label>
+        <label for="guest"><h3><b>Number of Guests</b></h3>
+            <input type="number" id="guest" placeholder="eg. 15" style="width:445px; height: 30px;">
+        </label>
+        <br><br>
+        <label for="arrival"><h3><b>Arrival Date & Time </b></h3>
+            <input type="date" id="arrival" style="width:285px ;height: 30px;">
+             <input type="time" id="arrival" style="width:95px ;height: 30px;">
+             <select name="arrival" id="arrival" style="width:50px;height: 30px;">
+                <option>AM</option>
+                <option>PM</option>
+             </select>
+             <br>
+             <span style="color: aqua;">Date </style>
+                 <span style="color: aqua; margin-left: 270px;">Hour/Minutes</style>
+                     </label>
+            <br><br>
+            <label for="departure"><h3><b>Departure Date</b></h3>
+              <input type="date" id="arrival" style="width:445px ;height: 30px;">
+             <br>
+             <span style="color: aqua;">Date </style> 
+                     </label>
+                     <br><br><hr>
+                     <h3>Free Pickup?</h3>
+                 <input type="radio" id="pickup_yes" name="free_pickup" value="yes" >
+                   <label for="pickup_yes">Yes Please-Pick me up on arrival</label>
+
+                <input type="radio" id="pickup_no" name="free_pickup" value="no">
+                <label for="pickup_no">No Thanks- I'll make it on my own</label>
+
+                <br><br>
+                <label for="request"><h3>Special Request</h3>
+                    <textarea name=request id="request" placeholder="Enter Special Request" style="width:455px ;height:100px ;"></textarea>
+
+                </label>
+            </body>
+            </html>
