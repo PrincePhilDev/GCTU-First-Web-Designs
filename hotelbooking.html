@@ -2,131 +2,171 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="page for Hotel-booking">
-    <meta http-equiv="refresh" content="10000">
-    <meta name="robot" content="index,follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="page for Hotel-booking">
     <meta name="author" content="Prince Philip">
-    <title>Hotel-booking</title>
-</head>
+    <title>Hotel Booking</title>
+
 <style>
-    body{
+
+    body {
         display: flex;
         background-color: #A0522D;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    min-height: 100vh;
-    
- }
-
-   label,h1,h4,h3{
-      color:#FFFFFF;
-      font: sans-serif;
-      
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        min-height: 100vh;
+        margin: 0;
+        font-family: sans-serif;
     }
-.form-container img {
-    max-width: 100%; 
-    height: auto;    
-}
-.form-container {
-    background-color: #9b6248;
-    display: inline-block;
-     max-width: 700px;
-     width: 100%;
-    margin-left:auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    border: 1px solid #777; 
-    border-radius: 8px; 
-  padding: 30px;
-  font: sans-serif;
-            
-}
-     button {
-            text-align:center;
-            background-color:#B8860B;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 200px;
-            font-size: 13px;
-            margin-top: 10px;
-            height: 45px;
-            box-sizing: border-box;
-        }
-</style>
-<body>
-    <forms action="" method="POST">
-    
-    <div class="form-container"> 
-        <hr>
-    <div style="text-align: center;">
-    <img src="room1.jpeg" alt="room1" height="100px" width="200px ">
-      <img src="room3.jpeg" alt="room3" height="100px" width="200px"><hr>
-    <h1><b>Hotel Booking
-    </b></h1>
-    <h4>Experience something every moment!</h4>
-</div>
-    
 
-<hr>
-    <label for="name"><h3><b>Name</b></h3>
-        <input type="text" id="name"  placeholder="First" style="width: 195px; height:30px; " required>
-          <input type="text" id="name"  placeholder="Last" style="width: 195px;height:30px;" required>
-    </label>
-    <br><br>
-    <label for="email"><h3><b>Email</b></h3>
-        <input type="text" id="email" placeholder="ex:Princephil@gmail.com" style="width:400px; height:30px" required>
-    </label>
-    <br> <br><hr>
-     <label for="room"><h3><b>Room type</b></h3>
-        <select name="room" id="room" style="width:400px; height: 30px ;" required>
-        <option>ROOM 1</option>
+    .form-container {
+        background-color: #9b6248;
+        max-width: 700px;
+        width: 100%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: 1px solid #777;
+    }
+
+    .form-container img {
+        width: 48%;
+        height: auto;
+        border-radius: 6px;
+    }
+
+    h1, h4, h3, label {
+        color: #ffffff;
+    }
+
+    input, select, textarea {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        border-radius: 4px;
+        border: 1px solid #444;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    .row-2 {
+        display: flex;
+        gap: 10px;
+    }
+    .row-2 input {
+        flex: 1;
+    }
+
+    button {
+        background-color: #B8860B;
+        color: white;
+        padding: 13px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+
+    button:hover {
+        background-color: #a0770a;
+    }
+
+    /* Responsive images row */
+    .image-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+        justify-content: center;
+    }
+
+    @media (max-width: 600px) {
+        .image-row {
+            flex-direction: column;
+        }
+        .image-row img {
+            width: 100%;
+        }
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<form action="" method="POST">
+
+    <div class="form-container">
+
+        <div class="image-row">
+            <img src="room1.jpeg" alt="room1">
+            <img src="room3.jpeg" alt="room3">
+        </div>
+
+        <hr>
+
+        <h1><b>Hotel Booking</b></h1>
+        <h4>Experience something every moment!</h4>
+
+        <hr>
+
+        <h3><b>Name</b></h3>
+        <div class="row-2">
+            <input type="text" placeholder="First" required>
+            <input type="text" placeholder="Last" required>
+        </div>
+
+        <h3><b>Email</b></h3>
+        <input type="email" placeholder="ex: Princephil@gmail.com" required>
+
+        <hr>
+
+        <h3><b>Room Type</b></h3>
+        <select required>
+            <option>ROOM 1</option>
             <option>ROOM 2</option>
             <option>ROOM 3</option>
         </select>
-    
+
+        <h3><b>Number of Guests</b></h3>
+        <input type="number" placeholder="e.g. 15" required>
+
+        <h3><b>Arrival Date & Time</b></h3>
+        <div class="row-2">
+            <input type="date" required>
+            <input type="time" required>
+        </div>
+
+        <select required>
+            <option>AM</option>
+            <option>PM</option>
+        </select>
+
+        <h3><b>Departure Date</b></h3>
+        <input type="date" required>
+
+        <hr>
+
+        <h3>Free Pickup?</h3>
+        <label>
+            <input type="radio" name="pickup" value="yes" required> Yes, pick me up on arrival
+        </label><br>
+        <label>
+            <input type="radio" name="pickup" value="no"> No, I’ll make it on my own
         </label>
-        <label for="guest"><h3><b>Number of Guests</b></h3>
-            <input type="number" id="guest" placeholder="eg. 15" style="width:400px; height: 30px;" re\>
-        </label>
-        <br><br>
-        <label for="arrival"><h3><b>Arrival Date & Time </b></h3>
-            <input type="date" id="arrival" style="width:120px ;height: 30px;" required>
-             <input type="time" id="arrival" style="width:95px ;height: 30px;"required>
-             <select name="arrival" id="arrival" style="width:70px;height: 30px;" required>
-                <option>AM</option>
-                <option>PM</option>
-             </select>
-             <br>
-             <span style="color: aqua;">Date </style>
-                 <span style="color: aqua; margin-left: 100px;">Hour/Minutes</style>
-                     </label>
-            <br><br>
-            <label for="departure"><h3><b>Departure Date</b></h3>
-              <input type="date" id="arrival" style="width:400px ;height: 30px;" required>
-             <br>
-             <span style="color: aqua;">Date </style> 
-                     </label>
-                     <br><br><hr>
-                     <h3>Free Pickup?</h3>
-                 <input type="radio" id="pickup_yes" name="free_pickup" value="yes" required>
-                   <label for="pickup_yes">Yes Please-Pick me up on arrival</label>
 
-                <input type="radio" id="pickup_no" name="free_pickup" value="no">
-                <label for="pickup_no">No Thanks- I'll make it on my own</label>
+        <h3>Special Request</h3>
+        <textarea placeholder="Enter special request"></textarea>
 
-                <br><br>
-                <label for="request"><h3>Special Request</h3>
-                    <textarea name=request id="request" placeholder="Enter Special Request" style="width:400px ;height:100px ;"></textarea>
+        <button type="submit">Submit Application</button>
 
-                </label><br>
-                <button type="submit">Submit Application</button>
-                
-            </div>
-            </forms>
-             </body>
-    </html>
+    </div>
+
+</form>
+
+</body>
+</html>
