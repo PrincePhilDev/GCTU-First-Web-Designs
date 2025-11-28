@@ -10,12 +10,15 @@
     <title>Hotel-booking</title>
 </head>
 <style>
+    * {
+        box-sizing: border-box;
+    }
     body{
         display: flex;
         background-color: #A0522D;
     justify-content: center;
     align-items: center;
-    padding: 30px;
+    padding: 20px;
     min-height: 100vh;
  }
 
@@ -28,13 +31,34 @@
     max-width: 100%; 
     height: auto;    
 }
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.image-row img {
+    width: 50%;
+    height: auto;
+}
+
+.name-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.name-inputs input {
+    width: 50%;
+    height: 30px;
+}
+
 .form-container {
     background-color: #9b6248;
     display: inline-block;
      max-width: 700px;
      width: 100%;
-    margin-left:auto;
-    margin-right: auto;
+    margin: 0 auto;
     box-sizing: border-box;
     border: 1px solid #777; 
     border-radius: 8px; 
@@ -55,6 +79,54 @@
             height: 45px;
             box-sizing: border-box;
         }
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 100px; 
+}
+
+
+@media (max-width: 600px) {
+    
+    .image-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .image-row img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .name-inputs {
+        flex-direction: column; 
+        gap: 0;
+    }
+    .name-inputs input {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+    
+    /* Specific overrides for the complex time/date inputs */
+    #arrival, 
+    #arrival + input[type="time"],
+    #arrival + input[type="time"] + select {
+        width: 100% !important;
+        margin-bottom: 5px;
+    }
+}
 </style>
 <body>
     <forms action="" method="POST">
@@ -62,8 +134,11 @@
     <div class="form-container"> 
         <hr>
     <div style="text-align: center;">
-    <img src="room1.jpeg" alt="room1" height="100px" width="200px ">
-      <img src="room3.jpeg" alt="room3" height="100px" width="200px"><hr>
+        <div class="image-row">
+            <img src="room1.jpeg" alt="room1">
+            <img src="room3.jpeg" alt="room3">
+        </div>
+        <hr>
     <h1><b>Hotel Booking
     </b></h1>
     <h4>Experience something every moment!</h4>
@@ -72,16 +147,18 @@
 
 <hr>
     <label for="name"><h3><b>Name</b></h3>
-        <input type="text" id="name"  placeholder="First" style="width: 215px; height:30px; " required>
-          <input type="text" id="name"  placeholder="Last" style="width: 215px;height:30px;" required>
+        <div class="name-inputs">
+            <input type="text" id="name"  placeholder="First" required>
+            <input type="text" id="name"  placeholder="Last" required>
+        </div>
     </label>
     <br><br>
     <label for="email"><h3><b>Email</b></h3>
-        <input type="text" id="email" placeholder="ex:Princephil@gmail.com" style="width:445px; height:30px" required>
+        <input type="text" id="email" placeholder="ex:Princephil@gmail.com" required>
     </label>
     <br> <br><hr>
      <label for="room"><h3><b>Room type</b></h3>
-        <select name="room" id="room" style="width:455px; height: 30px ;" required>
+        <select name="room" id="room" required>
         <option>ROOM 1</option>
             <option>ROOM 2</option>
             <option>ROOM 3</option>
@@ -89,25 +166,25 @@
     
         </label>
         <label for="guest"><h3><b>Number of Guests</b></h3>
-            <input type="number" id="guest" placeholder="eg. 15" style="width:445px; height: 30px;" re\>
+            <input type="number" id="guest" placeholder="eg. 15" required>
         </label>
         <br><br>
         <label for="arrival"><h3><b>Arrival Date & Time </b></h3>
-            <input type="date" id="arrival" style="width:285px ;height: 30px;" required>
-             <input type="time" id="arrival" style="width:95px ;height: 30px;"required>
-             <select name="arrival" id="arrival" style="width:50px;height: 30px;" required>
+            <input type="date" id="arrival" required>
+             <input type="time" id="arrival" required>
+             <select name="arrival" id="arrival" required>
                 <option>AM</option>
                 <option>PM</option>
              </select>
              <br>
-             <span style="color: aqua;">Date </style>
-                 <span style="color: aqua; margin-left: 270px;">Hour/Minutes</style>
+             <span style="color: aqua;">Date </span>
+                 <span style="color: aqua; margin-left: 270px;">Hour/Minutes</span>
                      </label>
             <br><br>
             <label for="departure"><h3><b>Departure Date</b></h3>
-              <input type="date" id="arrival" style="width:445px ;height: 30px;" required>
+              <input type="date" id="departure_date" required>
              <br>
-             <span style="color: aqua;">Date </style> 
+             <span style="color: aqua;">Date </span> 
                      </label>
                      <br><br><hr>
                      <h3>Free Pickup?</h3>
@@ -119,7 +196,7 @@
 
                 <br><br>
                 <label for="request"><h3>Special Request</h3>
-                    <textarea name=request id="request" placeholder="Enter Special Request" style="width:455px ;height:100px ;"></textarea>
+                    <textarea name=request id="request" placeholder="Enter Special Request"></textarea>
 
                 </label><br>
                 <button type="submit">Submit Application</button>

@@ -11,7 +11,9 @@
     <title>Company admission</title>
 </head>
 <style>
-    
+    * {
+        box-sizing: border-box;
+    }
     
    body {
             background-color:#2C3E50;
@@ -21,35 +23,61 @@
             padding: 30px;
             min-height: 100vh;
         }
-        .form-container img {
-    max-width: 100%; 
-    height: auto;    
-}
-        .form-container {
-  background-color:#34495E;
-    display: inline-block;
-     max-width: 700px;
-     width: 100%;
-    margin-left:auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    border: 1px solid #CCCCCC; 
-    border-radius: 8px; 
-  padding: 30px;
-  
-        }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .image-row {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    .image-row img {
+        width: 170px;
+        height: 90px;
+    }
+    
+    .name-inputs {
+        display: flex;
+        gap: 10px;
+    }
+    .name-inputs input {
+        width: 50% !important;
+    }
+    
+    .form-container {
+      background-color:#34495E;
+        display: inline-block;
+         max-width: 700px;
+         width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+        border: 1px solid #CCCCCC; 
+        border-radius: 8px; 
+      padding: 30px;
+      
+            }
+        
     h2  {
         color:#3498DB;
         }
-    input[type="text"],input[type="tel"],input[type="url"],
-    select
-        {
-         width: 220px;
+        
+    input[type="text"], input[type="tel"], input[type="url"], select {
+         width: 451px;
          height: 22px;
          background-color:#8a9cad;
-         max-width: 500px;
+         max-width: 100%;
           box-sizing: border-box;
-        }
+    }
+    
+    select {
+        width: 459px;
+    }
+    
     label
         {
             font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -86,32 +114,69 @@
        {
         cursor: pointer;
        }
+       
+    @media (max-width: 600px) {
+        
+        .image-row {
+            flex-direction: column;
+            align-items: center; 
+        }
+        .image-row img {
+            width: 80%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        
+        .name-inputs {
+            flex-direction: column;
+            gap: 0;
+        }
+        .name-inputs input {
+            width: 100% !important; 
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"], input[type="tel"], input[type="url"], select {
+            width: 100% !important;
+        }
+        
+        button {
+            width: 50%;
+        }
+    }
 </style>
 <body>
      <form action="/submit-admission" method="post">
         <div class="form-container">
      <div  class=heading style="text-align: center;"><hr>
-        <img src="philbond.jpeg" height="90px" width="170px">
-        <img src="philbond2.jpeg" height="90px" width="170px"><hr>
+        
+        <div class="image-row">
+            <img src="philbond.jpeg" alt="Philbond Image 1">
+            <img src="philbond2.jpeg" alt="Philbond Image 2">
+        </div>
+        
+         <hr>
          <label><strong><h2>PHILBOND COMPANY LTD.</h2></strong></label>
          <h6>Please fill in the form below to become a member!</h6>
      </div><hr>
       
           <div class="form-group">
               <label for="name">Name </label><br>
+              <div class="name-inputs">
                  <input type="text" id="name" placeholder="First"  required>
                 <input type="text" id="name" placeholder="Last" required>
-                </div>
+              </div>
+          </div>
 
             <div class="form-group">
                 <label for="e-mail">E-mail Address<br></label>
-                <input type="text" id="e-mail" placeholder="ex:Princephil@gmail.com" required style="width: 451px;">
+                <input type="text" id="e-mail" placeholder="ex:Princephil@gmail.com" required>
 
             </div>
 
             <div class="form-group">
                 <label for="phone">Phone number</label><br>
-                <input type="tel" id="phone" placeholder="### ### ####"  maxlength="10" style="width: 451px" required>
+                <input type="tel" id="phone" placeholder="### ### ####"  maxlength="10" required>
 
             </div><hr>
             
@@ -148,7 +213,7 @@
 
              <div class="form-group">
                 <label for="exp">Experience Level</label><br>
-                <select name="Experience_level" id="exp"style="width: 459px; height: 29px;" required>
+                <select name="Experience_level" id="exp" required>
                 <option value="">--Select a level--</option>
                 <option value="junior">Junior</option>
                 <option value="mid_level">Mid-Level</option>
@@ -158,13 +223,13 @@
             </div>
             <div class="form-group">
                 <label for="port-link">Portfolio/GitHub  Link</label><br>
-                <input type="url" name="port-link" id="port-link" style="width: 451px;" required>
+                <input type="url" name="port-link" id="port-link" required>
 
             </div><hr>
 
             <div class="form-group">
                 <label for="availability">Availability</label><br>
-                <select name="availability" id="availability" style="width:459px; height: 29px;" required>
+                <select name="availability" id="availability" required>
                     <option value="">--Select an option--</option>
                     <option value="full_time">Full time</option>
                     <option value="part_time">Part time</option>
@@ -186,9 +251,10 @@
 
            <div class="form-group">
                 <label for="location">Location</label><br>
-                 <input type="text" id="location" placeholder="Country"  required>
-                <input type="text" id="location" placeholder="City" required>
-
+                 <div class="name-inputs">
+                     <input type="text" id="location" placeholder="Country"  required>
+                    <input type="text" id="location" placeholder="City" required>
+                 </div>
            </div><hr>
 
            <div class="form-group">
@@ -198,10 +264,12 @@
            </div>
            <div class="form-group">
             <label for="sal_range"> Expected Salary Range</label><br>
-            <input type="number" id="sal_range" placeholder="Min (GHS)" min="2000" step="100" max="4000"
-             style="background-color: #8a9cad; height: 22px;width:89px;" required>
-            <input type="number" id="sal_range" placeholder="Max (GHS)" min="5000" step="100" max="20000"
-             style="background-color: #8a9cad; height: 22px;width:89px;" required>
+            <div class="name-inputs">
+                <input type="number" id="sal_range" placeholder="Min (GHS)" min="2000" step="100" max="4000"
+                 style="background-color: #8a9cad; height: 22px;">
+                <input type="number" id="sal_range" placeholder="Max (GHS)" min="5000" step="100" max="20000"
+                 style="background-color: #8a9cad; height: 22px;">
+            </div>
 
 
            </div>
