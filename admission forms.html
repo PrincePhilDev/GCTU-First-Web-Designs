@@ -11,25 +11,62 @@
   </head>
   <div style="text-align: center;">
       <style>
-  body{
-    background-color:#ac673f
-      }
-      h2{
-        color:gold;
-      }
+        body{
+        display: flex;
+        background-color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    min-height: 100vh;
+ }
+
+   label,h1,h4,h3{
+      color:#000080;
+      font: sans-serif;
+      
+    }
+
+.form-container {
+  background-color: #F0F8FF;
+    display: inline-block;
+     max-width: 700px;
+    margin-left:auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border: 1px solid #CCCCCC; 
+    border-radius: 8px; 
+  padding: 30px;
+            
+  }
+   button {
+            text-align:center;
+            background-color:#000080;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 150px;
+            font-size: 13px;
+            margin-top: 10px;
+            height: 40px;
+            box-sizing: border-box;
+        }
     </style>   
+  </div>
      <body>
     <forms action="" method="POST">
+      <div class="form-container">
       <h2>Admission Application Form</h2>
-    </div>
       <label for="name"> Student's Name:</label><br>
         <input type="text"  id="name" placeholder="First" required style="width: 147px;">
-    <input type="text"  id="name" placeholder="Last" style="width: 147px;">
+    <input type="text"  id="name" placeholder="Last" style="width: 147px;" required>
 
     <br><br>
     
       <label for="course"> Course:</label><br>
         <select name="course" id="course" style="width: 315px;">
+          <option >--Select a course--</option required>
          <option >Computer Science</option>
           <option >Information Technology</option>
            <option >Law</option>
@@ -38,18 +75,18 @@
      <br>
       
       <label for="dob"> Date Of Birth:</label><br>
-        <input type="date" id="dob" style="width: 310px;">
+        <input type="date" id="dob" style="width: 310px;" required>
       
       <br>
       <br>
       <label for="Pname"> Parent/Guardian Name:</label><br>
-        <input type="text" id="Pname" placeholder="First" style="width:147px;" >
-           <input type="text" id="Pname" placeholder="Last" style="width:147px;" >
+        <input type="text" id="Pname" placeholder="First" style="width:147px;" required>
+           <input type="text" id="Pname" placeholder="Last" style="width:147px;" required>
     
       <br>
       <br>
       <label for="address"> Current Address:</label><br>
-        <input type="text" id="address" placeholder="Street Address" style="width: 304px;">
+        <input type="text" id="address" placeholder="Street Address" style="width: 304px;"required>
         <br>
         <br>
         <input type="text" id="address" placeholder="Street Address Line 2" style="width: 304px"; >
@@ -66,7 +103,10 @@
         <br>
       
       <label for="email">Email:</label><br>
-        <input type="text" id="email" placeholder="******@gmail.com" style="width: 305px;">
+        <input type="text" id="email" placeholder="ex:Princephil@gmail.com" style="width: 305px;"required>
+        <br><br>
+         <button type="submit">Submit Application</button>
+        </div>
     </forms>
   </body>
 </html>

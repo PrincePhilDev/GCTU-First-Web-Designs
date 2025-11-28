@@ -14,17 +14,34 @@
     
     
    body {
-            background-color: rgb(179, 144, 102);
+            background-color:#2C3E50;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+            min-height: 100vh;
+        }
+        .form-container {
+  background-color:#34495E;
+    display: inline-block;
+     max-width: 700px;
+    margin-left:auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border: 1px solid #CCCCCC; 
+    border-radius: 8px; 
+  padding: 30px;
+  
         }
     h2  {
-        color: green;
+        color:#3498DB;
         }
     input[type="text"],input[type="tel"],input[type="url"],
     select
         {
          width: 220px;
          height: 22px;
-         background-color: darkturquoise;
+         background-color:#8a9cad;
          max-width: 500px;
           box-sizing: border-box;
         }
@@ -49,7 +66,7 @@
         }
      button {
             text-align:center;
-            background-color: black;
+            background-color:#3498DB;
             color: white;
             padding: 10px 15px;
             border: none;
@@ -66,14 +83,15 @@
        }
 </style>
 <body>
-   
+     <form action="/submit-admission" method="post">
+        <div class="form-container">
      <div  class=heading style="text-align: center;"><hr>
         <img src="philbond.jpeg" height="90px" width="170px">
         <img src="philbond2.jpeg" height="90px" width="170px"><hr>
          <label><strong><h2>PHILBOND COMPANY LTD.</h2></strong></label>
          <h6>Please fill in the form below to become a member!</h6>
      </div><hr>
-        <form action="/submit-admission" method="post">
+      
           <div class="form-group">
               <label for="name">Name </label><br>
                  <input type="text" id="name" placeholder="First"  required>
@@ -82,7 +100,7 @@
 
             <div class="form-group">
                 <label for="e-mail">E-mail Address<br></label>
-                <input type="text" id="e-mail" placeholder="ex:myname@gmail.com" required style="width: 451px;">
+                <input type="text" id="e-mail" placeholder="ex:Princephil@gmail.com" required style="width: 451px;">
 
             </div>
 
@@ -176,9 +194,9 @@
            <div class="form-group">
             <label for="sal_range"> Expected Salary Range</label><br>
             <input type="number" id="sal_range" placeholder="Min (GHS)" min="2000" step="100" max="4000"
-             style="background-color: aqua; height: 22px;width:89px;" required>
+             style="background-color: #8a9cad; height: 22px;width:89px;" required>
             <input type="number" id="sal_range" placeholder="Max (GHS)" min="5000" step="100" max="20000"
-             style="background-color: aqua; height: 22px;width:89px;" required>
+             style="background-color: #8a9cad; height: 22px;width:89px;" required>
 
 
            </div>
@@ -186,7 +204,7 @@
            <div class="form-group">
                 <label for="not_period">Notice Period</label><br>
                 <input type="number" id="not_period" name="notice-period" min="1"  max="30"
-                style="background-color: aqua; height: 22px;width:59px;" required>
+                style="background-color:#8a9cad; height: 22px;width:59px;" required>
                 <select name="notice-period" id="not_period" style="width: 129px; height: 29px;" required>
                     <option value="days">Days</option>
                     <option value="weeks">Weeks</option>
@@ -197,7 +215,7 @@
            </div>
            <button type="submit">Submit Application</button>
            
-
+       </div>
     </form>
 </body>
 </html>

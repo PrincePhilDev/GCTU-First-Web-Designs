@@ -11,18 +11,58 @@
 </head>
 
 <style>
-  body  {
-    background-color: rgb(138, 138, 184);
+  body{
+        display: flex;
+        background-color:#3F2A56;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    min-height: 100vh;
+ }
 
+   label,h1,h4,h3{
+      color:#C6F918;
+      font: sans-serif;
+      
     }
+
+.form-container {
+    background-color: #5A3B7B;
+    display: inline-block;
+     max-width: 700px;
+    margin-left:auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border: 1px solid #777; 
+    border-radius: 8px; 
+  padding: 30px;
+            
+}
+     button {
+            text-align:center;
+            background-color:#B8860B;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 200px;
+            font-size: 13px;
+            margin-top: 10px;
+            height: 45px;
+            box-sizing: border-box;
+        }
+
     input{
-        background-color:goldenrod; box-sizing: border-box;
+        background-color:#F9F9F9; box-sizing: border-box;
     }
     select{
-        background-color: goldenrod; box-sizing: border-box;
+        background-color: #F9F9F9; box-sizing: border-box;
     }
 </style>
 <body>
+    <forms action="" method="POST">
+        <div class="form-container">
     <div style="text-align: center;">
     <label for="title" style="font-size: 30px; ">
         E-commerce Registration Form
@@ -40,16 +80,16 @@
      </label>
      <br>
      <input type="text" id="name" class="fill-in" placeholder="First" style="width: 200px; 
-     height:25px; border-top-style: hidden; border-left: hidden; border-right: hidden;">
+     height:25px; border-top-style: hidden; border-left: hidden; border-right: hidden;" required>
      <input type="text" id="name" class="fill-in" placeholder="Last" style="width: 200px;
-      height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;">
+      height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;" required>
      <br><br>
      <label for="mail">
         Seller e-mail address*
      </label>
      <br>
-     <input type="text" id="mail" class="fill-in" placeholder="ex: myname@gmail.com" style="width: 410px;
-      height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;" >
+     <input type="text" id="mail" class="fill-in" placeholder="ex:Princephil@gmail.com" style="width: 410px;
+      height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;" required >
      <label for="number">
         <br><br>
         Phone number*
@@ -57,13 +97,13 @@
      </label>
      <br>
      <input type="tel" id="number" class="fill-in" placeholder="### ### ####" style="width: 410px;
-      height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;"maxlength="10">
+      height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;"maxlength="10" required>
      <br><hr> 
      <label for="type">
         Organization type
      </label>
     <br>
-    <select style="width: 420px;height: 25px;">
+    <select style="width: 420px;height: 25px;"required>
         <option>Business-Consumer</option>
         <option>Business-Business </option>
         <option>Consumer-Consumer</option>
@@ -75,7 +115,7 @@
         Offering*
     </label>
     <br>
-    <select style="width: 420px;height: 25px;" >
+    <select style="width: 420px;height: 25px;" required >
         <option>Physical Goods</option>
         <option>Digital Goods </option>
         <option>Services</option>
@@ -88,7 +128,10 @@
     </label>
     <br>
     <input type="date" id="when" class="fill-in" style="width: 415px;
-    height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;">
-
+    height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;"required>
+    <br>
+    <button type="submit">Submit Application</button>
+    </div>
+</forms>
 </body>
 </html>

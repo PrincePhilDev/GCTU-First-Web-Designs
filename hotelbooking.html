@@ -11,12 +11,52 @@
 </head>
 <style>
     body{
-        background-color: rgb(151, 106, 50); 
+        display: flex;
+        background-color: #A0522D;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    min-height: 100vh;
+ }
+
+   label,h1,h4,h3{
+      color:#FFFFFF;
+      font: sans-serif;
+      
     }
-    
+
+.form-container {
+    background-color: #9b6248;
+    display: inline-block;
+     max-width: 700px;
+    margin-left:auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    border: 1px solid #777; 
+    border-radius: 8px; 
+  padding: 30px;
+            
+}
+     button {
+            text-align:center;
+            background-color:#B8860B;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 200px;
+            font-size: 13px;
+            margin-top: 10px;
+            height: 45px;
+            box-sizing: border-box;
+        }
 </style>
 <body>
-    <hr>
+    <forms action="" method="POST">
+    
+    <div class="form-container"> 
+        <hr>
     <div style="text-align: center;">
     <img src="room1.jpeg" alt="room1" height="100px" width="200px">
       <img src="room3.jpeg" alt="room3" height="100px" width="200px"><hr>
@@ -28,16 +68,16 @@
 
 <hr>
     <label for="name"><h3><b>Name</b></h3>
-        <input type="text" id="name" placeholder="First" style="width: 215px; height:30px; display:inline-block;">
-          <input type="text" id="name" placeholder="Last" style="width: 215px;height:30px; display:inline-block;">
+        <input type="text" id="name"  placeholder="First" style="width: 215px; height:30px; " required>
+          <input type="text" id="name"  placeholder="Last" style="width: 215px;height:30px;" required>
     </label>
     <br><br>
     <label for="email"><h3><b>Email</b></h3>
-        <input type="text" id="email" placeholder="ex:myname@gmail.com" style="width:445px; height:30px">
+        <input type="text" id="email" placeholder="ex:Princephil@gmail.com" style="width:445px; height:30px" required>
     </label>
     <br> <br><hr>
      <label for="room"><h3><b>Room type</b></h3>
-        <select name="room" id="room" style="width:455px; height: 30px ;">
+        <select name="room" id="room" style="width:455px; height: 30px ;" required>
         <option>ROOM 1</option>
             <option>ROOM 2</option>
             <option>ROOM 3</option>
@@ -45,13 +85,13 @@
     
         </label>
         <label for="guest"><h3><b>Number of Guests</b></h3>
-            <input type="number" id="guest" placeholder="eg. 15" style="width:445px; height: 30px;">
+            <input type="number" id="guest" placeholder="eg. 15" style="width:445px; height: 30px;" re\>
         </label>
         <br><br>
         <label for="arrival"><h3><b>Arrival Date & Time </b></h3>
-            <input type="date" id="arrival" style="width:285px ;height: 30px;">
-             <input type="time" id="arrival" style="width:95px ;height: 30px;">
-             <select name="arrival" id="arrival" style="width:50px;height: 30px;">
+            <input type="date" id="arrival" style="width:285px ;height: 30px;" required>
+             <input type="time" id="arrival" style="width:95px ;height: 30px;"required>
+             <select name="arrival" id="arrival" style="width:50px;height: 30px;" required>
                 <option>AM</option>
                 <option>PM</option>
              </select>
@@ -61,13 +101,13 @@
                      </label>
             <br><br>
             <label for="departure"><h3><b>Departure Date</b></h3>
-              <input type="date" id="arrival" style="width:445px ;height: 30px;">
+              <input type="date" id="arrival" style="width:445px ;height: 30px;" required>
              <br>
              <span style="color: aqua;">Date </style> 
                      </label>
                      <br><br><hr>
                      <h3>Free Pickup?</h3>
-                 <input type="radio" id="pickup_yes" name="free_pickup" value="yes" >
+                 <input type="radio" id="pickup_yes" name="free_pickup" value="yes" required>
                    <label for="pickup_yes">Yes Please-Pick me up on arrival</label>
 
                 <input type="radio" id="pickup_no" name="free_pickup" value="no">
@@ -77,6 +117,10 @@
                 <label for="request"><h3>Special Request</h3>
                     <textarea name=request id="request" placeholder="Enter Special Request" style="width:455px ;height:100px ;"></textarea>
 
-                </label>
-            </body>
-            </html>
+                </label><br>
+                <button type="submit">Submit Application</button>
+                
+            </div>
+            </forms>
+             </body>
+    </html>
