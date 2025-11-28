@@ -1,0 +1,6 @@
+# Ignore configuration files
+*.json
+
+# Ignore project environment folders (for later professional projects)
+/node_modules
+/.vscode
