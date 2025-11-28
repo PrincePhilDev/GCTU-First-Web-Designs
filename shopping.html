@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta name="description" content="sign up page for E-commerce sellers">
     <meta http-equiv="refresh" content="10000">
     <meta name="robot" content="index,follow">
@@ -11,16 +11,12 @@
 </head>
 
 <style>
-*{
-    box-sizing: border-box;
-}
-
   body{
         display: flex;
         background-color:#3F2A56;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
     min-height: 100vh;
  }
 
@@ -30,50 +26,22 @@
       
     }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.image-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.image-row img {
-    width: 50%;
-    height: auto;
-}
-
-.name-inputs {
-    display: flex;
-    gap: 10px;
-}
-
-.name-inputs input {
-    width: 50% !important; 
-}
-
-
 .form-container {
     background-color: #5A3B7B;
     display: inline-block;
      max-width: 700px;
-     width: 100%;
-    margin: 0 auto;
+    margin-left:auto;
+    margin-right: auto;
     box-sizing: border-box;
     border: 1px solid #777; 
     border-radius: 8px; 
-    padding: 30px;
+  padding: 30px;
             
 }
      button {
             text-align:center;
             background-color:#B8860B;
-            color: #333333; 
+            color: white;
             padding: 10px 15px;
             border: none;
             border-radius: 4px;
@@ -91,110 +59,79 @@ img {
     select{
         background-color: #F9F9F9; box-sizing: border-box;
     }
-
-
-@media (max-width: 600px) {
-    
-    .image-row {
-        flex-direction: column;
-        gap: 0;
-    }
-    .image-row img {
-        width: 100%;
-        margin-bottom: 10px;
-    }
-
-    .name-inputs {
-        flex-direction: column; 
-        gap: 0;
-    }
-    .name-inputs input {
-        width: 100% !important;
-        margin-bottom: 10px;
-    }
-}
 </style>
 <body>
     <forms action="" method="POST">
         <div class="form-container">
-            <div style="text-align: center;">
-                <label for="title" style="font-size: 30px; ">
-                    E-commerce Registration Form
-                </label>
-                <br><br>
-                <hr>
-                
-                <div class="image-row">
-                    <img src="shoppingimg.jpeg" alt="Shopping Image 1"> 
-                    <img src="shoppingimg2.png" alt="Shopping Image 2"> 
-                </div>
-                
-                <hr>
-                <h6>  Please fill out this form to sell on our platform. </h6>
-            </div>
-            <hr>
-            <label for="name">
-                Seller name*
-            </label>
-            <br>
-            
-            <div class="name-inputs">
-                <input type="text" id="name" class="fill-in" placeholder="First" 
-                 style="height:25px; border-top-style: hidden; border-left: hidden; border-right: hidden;" required>
-                <input type="text" id="name" class="fill-in" placeholder="Last" 
-                 style="height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;" required>
-            </div>
-            
-            <br><br>
-            <label for="mail">
-                Seller e-mail address*
-            </label>
-            <br>
-            <input type="text" id="mail" class="fill-in" placeholder="ex:Princephil@gmail.com" 
-             style="width: 410px; height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;" required >
-            
-            <label for="number">
-                <br><br>
-                Phone number*
-            </label>
-            <br>
-            <input type="tel" id="number" class="fill-in" placeholder="### ### ####" 
-             style="width: 410px; height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;"maxlength="10" required>
-            <br><hr> 
-            
-            <label for="type">
-                Organization type
-            </label>
-            <br>
-            <select style="width: 420px;height: 25px;"required>
-                <option>Business-Consumer</option>
-                <option>Business-Business </option>
-                <option>Consumer-Consumer</option>
-                <option>Consumer-Business</option>
-                <option>Business-Administration</option>
-            </select>
-            <br><br>
-            <label for="offer">
-                Offering*
-            </label>
-            <br>
-            <select style="width: 420px;height: 25px;" required >
-                <option>Physical Goods</option>
-                <option>Digital Goods </option>
-                <option>Services</option>
-            </select>
-                <br><hr>
+    <div style="text-align: center;">
+    <label for="title" style="font-size: 30px; ">
+        E-commerce Registration Form
+    </label>
+    <br><br>
+<hr>
+    <img src="shoppingimg.jpeg" style="height: 150px; width: 200px;">
+     <img src="shoppingimg2.png" style="height:150px; width: 200px;">
+     <hr>
+     <h6>  Please fill out this form to sell on our platform. </h6>
+    </div>
+     <hr>
+     <label for="name">
+        Seller name*
+     </label>
+     <br>
+     <input type="text" id="name" class="fill-in" placeholder="First" style="width: 200px; 
+     height:25px; border-top-style: hidden; border-left: hidden; border-right: hidden;" required>
+     <input type="text" id="name" class="fill-in" placeholder="Last" style="width: 200px;
+      height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;" required>
+     <br><br>
+     <label for="mail">
+        Seller e-mail address*
+     </label>
+     <br>
+     <input type="text" id="mail" class="fill-in" placeholder="ex:Princephil@gmail.com" style="width: 410px;
+      height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;" required >
+     <label for="number">
+        <br><br>
+        Phone number*
+        
+     </label>
+     <br>
+     <input type="tel" id="number" class="fill-in" placeholder="### ### ####" style="width: 410px;
+      height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;"maxlength="10" required>
+     <br><hr> 
+     <label for="type">
+        Organization type
+     </label>
+    <br>
+    <select style="width: 420px;height: 25px;"required>
+        <option>Business-Consumer</option>
+        <option>Business-Business </option>
+        <option>Consumer-Consumer</option>
+        <option>Consumer-Business</option>
+        <option>Business-Administration</option>
+    </select>
+    <br><br>
+    <label for="offer">
+        Offering*
+    </label>
+    <br>
+    <select style="width: 420px;height: 25px;" required >
+        <option>Physical Goods</option>
+        <option>Digital Goods </option>
+        <option>Services</option>
+    </select>
+        <br><hr>
 
 
-            <label for="when">
-                When do you want to start selling on our platform*
-            </label>
-            <br>
-            <input type="date" id="when" class="fill-in" 
-            style="width: 415px; height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;"required>
-            <br>
-            <button type="submit">Submit Application</button>
-        </div>
-    </forms>
+    <label for="when">
+        When do you want to start selling on our platform*
+    </label>
+    <br>
+    <input type="date" id="when" class="fill-in" style="width: 415px;
+    height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;"required>
+    <br>
+    <button type="submit">Submit Application</button>
+    </div>
+</forms>
 </body>
 </html>
