@@ -80,17 +80,61 @@
         display: flex;
         gap: 10px;
         margin-bottom: 15px;
-        justify-content: center;
+        
     }
-
-    @media (max-width: 600px) {
+  .image-row  img{
+        width: 50%;
+        height: auto;
+        border-radius: 12px;
+  }
+    @media (max-width: 380px) {
         .image-row {
             flex-direction: column;
         }
         .image-row img {
             width: 100%;
+    
+            
         }
     }
+   .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0 20px 0;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    color: #3C2F2F;
+}
+
+.radio-group input[type="radio"] {
+    width: 18px;
+    height: 18px;
+}
+.arrival-row {
+    display: flex;
+    gap: 10px;
+}
+
+.arrival-row input,
+.arrival-row select {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;                 
+    height: 37px;                  
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+
+
 
 </style>
 
@@ -135,16 +179,17 @@
         <h3><b>Number of Guests</b></h3>
         <input type="number" placeholder="e.g. 15" required>
 
-        <h3><b>Arrival Date & Time</b></h3>
-        <div class="row-2">
-            <input type="date" required>
-            <input type="time" required>
-        </div>
+       <h3><b>Arrival Date & Time</b></h3>
 
-        <select required>
-            <option>AM</option>
-            <option>PM</option>
-        </select>
+<div class="arrival-row">
+    <input type="date" required>
+    <input type="time" required>
+    <select required>
+        <option>AM</option>
+        <option>PM</option>
+    </select>
+</div>
+
 
         <h3><b>Departure Date</b></h3>
         <input type="date" required>
@@ -152,12 +197,19 @@
         <hr>
 
         <h3>Free Pickup?</h3>
-        <label>
-            <input type="radio" name="pickup" value="yes" required> Yes, pick me up on arrival
-        </label><br>
-        <label>
-            <input type="radio" name="pickup" value="no"> No, I’ll make it on my own
-        </label>
+
+<div class="radio-group">
+    <label>
+        <input type="radio" name="pickup" value="yes" required>
+        Yes, pick me up on arrival
+    </label>
+
+    <label>
+        <input type="radio" name="pickup" value="no">
+        No, I’ll make it on my own
+    </label>
+</div>
+
 
         <h3>Special Request</h3>
         <textarea placeholder="Enter special request"></textarea>
