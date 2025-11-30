@@ -8,6 +8,7 @@
     <meta name="robot" content="index,follow">
     <meta name="author" content="Prince Philip">
     <title>Hotel-booking</title>
+  
 </head>
 <style>
     body{
@@ -19,6 +20,10 @@
     min-height: 100vh;
     
  }
+  .name-inputs input {
+        width: 195px; 
+        margin-bottom: 10px;
+  }
 
    label,h1,h4,h3{
       color:#FFFFFF;
@@ -31,7 +36,7 @@
 }
 .form-container {
     background-color: #9b6248;
-    display: inline-block;
+    display:inline-block;
      max-width: 700px;
      width: 100%;
     margin-left:auto;
@@ -57,6 +62,22 @@
             height: 45px;
             box-sizing: border-box;
         }
+    
+        @media screen and (max-width: 550px) {
+    
+
+    .name-inputs {
+        gap: 2%;
+    }
+    .name-inputs input {
+        width: 47% !important; 
+        margin-bottom: 10px;
+    }
+  
+}
+
+
+    
 </style>
 <body>
     <forms action="" method="POST">
@@ -73,10 +94,14 @@
     
 
 <hr>
+  <div class="name-inputs">
     <label for="name"><h3><b>Name</b></h3>
-        <input type="text" id="name"  placeholder="First" style="width: 195px; height:30px; " required>
-          <input type="text" id="name"  placeholder="Last" style="width: 195px;height:30px;" required>
+      
+        <input type="text" id="name"  placeholder="First" style=" height:30px ; " required>
+          <input type="text" id="name"  placeholder="Last" style=" height: 30px;" required>
+        
     </label>
+    </div>
     <br><br>
     <label for="email"><h3><b>Email</b></h3>
         <input type="text" id="email" placeholder="ex:Princephil@gmail.com" style="width:400px; height:30px" required>
