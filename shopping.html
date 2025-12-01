@@ -23,14 +23,16 @@
  }
 
    label,h1,h4,h3{
-      color:#C6F918;
+      color:#F9F9F9;
       font: sans-serif;
-      
+      font-size:18px;
+      font-weight: bold;
     }
     .form-container img 
     {
-          width:45% ;
-            max-width: 48%; 
+          width:48% ;
+            max-width: 49%; 
+         min-height: 120px;
             height: auto;
             
     }
@@ -45,7 +47,7 @@
     box-sizing: border-box;
     border: 1px solid #777; 
     border-radius: 8px; 
-    padding: 20px;
+    padding: 10px;
   font: sans-serif;
             
 }
@@ -62,15 +64,60 @@
             margin-top: 10px;
             height: 45px;
             box-sizing: border-box;
+             min-width:100px
         }
 
-    input{
+    input,select{
         background-color:#F9F9F9; box-sizing: border-box;
+        border-radius: 6px;
     }
-    select{
-        background-color: #F9F9F9; box-sizing: border-box;
+    
+    .name-inputs input
+    {
+         height:28px;
+         border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
+          width: 38%;
+           min-width:70px
     }
+    .other-inputs input[type="text"]
+    {
+        width: 77%;
+        height: 28px;
+        border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
+    }
+     .other-inputs input[type="tel"]
+     {
+         width: 40%;
+        height: 28px;
+         min-width:140px;
+        border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
+     }
+     .other-inputs select
+        {
+        width: 40%;
+        min-width:140px;
+        height: 28px;
+        border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
 }
+ .other-inputs input[type="date"]
+    {
+        width: 40%;
+         min-width:140px;
+        height: 28px;
+        border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
+     }
+    }
+
 </style>
 <body>
     <forms action="submit-admission" method="POST">
@@ -79,43 +126,44 @@
     <label for="title" style="font-size: 30px; ">
         E-commerce Registration Form
     </label>
-    <br><br>
+    <br>
 <hr>
     <img src="shoppingimg.jpeg" >
      <img src="shoppingimg2.png" >
      <hr>
-     <h6>  Please fill out this form to sell on our platform. </h6>
+     <h5>  Please fill out this form to sell on our platform. </h5>
     </div>
      <hr>
+     <div class="name-inputs">
      <label for="name">
-        Seller name*
+        Seller's name
      </label>
-     <br>
-     <input type="text" id="name" class="fill-in" placeholder="First" style="width: 200px; 
-     height:25px; border-top-style: hidden; border-left: hidden; border-right: hidden;" required>
-     <input type="text" id="name" class="fill-in" placeholder="Last" style="width: 200px;
-      height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;" required>
      <br><br>
+     <input type="text" id="name" class="fill-in" placeholder="First"  required>
+     <input type="text" id="name" class="fill-in" placeholder="Last"  required>
+      </div>
+     <br><br>
+
+     <div class="other-inputs">
      <label for="mail">
-        Seller e-mail address*
+        Seller's E-mail address
      </label>
-     <br>
-     <input type="text" id="mail" class="fill-in" placeholder="ex:Princephil@gmail.com" style="width: 410px;
-      height:25px;border-top-style: hidden; border-left: hidden; border-right: hidden;" required >
+     <br><br>
+     <input type="text" id="mail" class="fill-in" placeholder="ex:Princephil@gmail.com"  required >
      <label for="number">
         <br><br>
-        Phone number*
+        Phone number
         
      </label>
-     <br>
-     <input type="tel" id="number" class="fill-in" placeholder="### ### ####" style="width: 410px;
-      height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;"maxlength="10" required>
+     <br><br>
+     <input type="tel" id="number" class="fill-in" placeholder="### ### ####" maxlength="10" required>
      <br><hr> 
      <label for="type">
         Organization type
      </label>
-    <br>
-    <select style="width: 420px;height: 25px;"required>
+    <br><br>
+    <select required>
+         <option>--Select an option--</option>
         <option>Business-Consumer</option>
         <option>Business-Business </option>
         <option>Consumer-Consumer</option>
@@ -124,10 +172,11 @@
     </select>
     <br><br>
     <label for="offer">
-        Offering*
+        Offering
     </label>
-    <br>
-    <select style="width: 420px;height: 25px;" required >
+    <br><br>
+    <select  required >
+         <option>--Select an option--</option>
         <option>Physical Goods</option>
         <option>Digital Goods </option>
         <option>Services</option>
@@ -136,14 +185,13 @@
 
 
     <label for="when">
-        When do you want to start selling on our platform*
+        When do you want to start selling on our platform
     </label>
-    <br>
-    <input type="date" id="when" class="fill-in" style="width: 415px;
-    height: 25px;border-top-style: hidden; border-left: hidden; border-right: hidden;"required>
-    <br>
+    <br><br>
+    <input type="date" id="when" class="fill-in" required>
+    <br><br>
     <button type="submit">Submit Application</button>
-    </div>
+    </div></div>
 </forms>
 </body>
 </html>

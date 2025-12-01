@@ -13,6 +13,14 @@
 <style>
    
         @media screen and (min-width: 100px) {
+            input
+            {
+                border-radius: 6px;
+                 border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
+     
+            }
     .name-inputs input {
         width: 40%; 
         margin-bottom: 8px;
@@ -86,11 +94,21 @@
     {
         width: 17%;
         height: 30px;
+         border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
+          border-radius: 6px;
+     
     }
 .latter-page textarea
 {
     width:37%;
     height: 70px;
+     border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
+     border-radius: 6px;
+     min-width:180px;
 }
 .latter-page input[type="date"]
 {
@@ -102,7 +120,12 @@
 {
  width:28%;
  height: 30px;
-}
+ border-radius: 6px;
+  border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
+     }
+
 .room-part input
 {
     width:27% ;
@@ -112,8 +135,7 @@ span
 {
 margin-left: 35%;
 }
-
-}
+        }
 
 
 
@@ -141,13 +163,13 @@ margin-left: 35%;
           <input type="text" id="name"  placeholder="Last"  required>
         
     </label>
-    </div>
-    <br>
+    </div><br>
+    
     <div class="other-inputs">
     <label for="email"><h3><b>Email</b></h3>
         <input type="text" id="email" placeholder="ex:Princephil@gmail.com"  required>
     </label></div>
-    <br> <br><hr>
+    <br> <hr>
     <div class="room-part">
      <label for="room"><h3><b>Room type</b></h3>
         <select name="room" id="room"  required >
@@ -157,10 +179,11 @@ margin-left: 35%;
         </select>
     
         </label>
+        <br><br>
         <label for="guest"><h3><b>Number of Guests</b></h3>
             <input type="number" id="guest" placeholder="eg. 15"  required>
         </label></div>
-        <br><br>
+        <br>
 
         <div class="date-time">
         <label for="arrival"><h3><b>Arrival Date & Time </b></h3>
@@ -174,7 +197,7 @@ margin-left: 35%;
              <label style="color: aqua;">Date </style>
                  <span style="color: aqua; ">Time</style>
                      </label></div>
-            <br><br>
+            <br>
 
             <div class="latter-page">
             <label for="departure"><h3><b>Departure Date</b></h3>
