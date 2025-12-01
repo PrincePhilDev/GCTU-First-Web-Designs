@@ -26,8 +26,8 @@
         }
         .form-container img 
         {
-            width:200px ;
-            height: 90px;
+            width:45% ;
+            height: 100px;
             max-width: 48%; 
             height: auto;    
         }
@@ -44,50 +44,57 @@
             font: sans-serif;
             border: 1px solid #777; 
             border-radius: 8px; 
+            padding: 20px
   
         }
 
-         h2  
+         h2
         {
-        color:#3498DB;
+        color:#29a5f8;
+    
         }
 
          input[type="text"],input[type="tel"],input[type="url"],select
     
         {
-            width: 394px;
-             height: 30px;
+            width: 81%;
+             height: 32px;
              background-color:#d1d1d1;
             max-width: 500px;
             box-sizing: border-box;
+            
         }
         
         .name-inputs input
         {
-            width:195px;
+            width:40%;
         }
 
     label
         {
             font: sans-serif;
-            font-size:17px;
+            font-size:18px;
             color: gold;
         }
 
-    .form-group
+    .form-group, .salary-group,.latter-page
         {
-            margin-bottom: 15px;
-            
+            margin-bottom: 33px;
+            min-width: 40% ;
         }
 
-    .radio-group label
-        {
+    .checkbox-group label, .radio-group label   {
             color: black;
-            margin-right: 15px;
-            font-size: 15px;
+            margin-right: 13%;
+            font-size: 16px;
             display: inline-block;
             cursor: pointer;
+            width:20% ;
         }
+       .checkbox-group input
+       {
+        border-radius: 3px;
+       }
      button {
             text-align:center;
             background-color:#3498DB;
@@ -96,7 +103,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            width: 25%;
+            width: 33%;
             margin-left: 10px;
             font-size: 13px;
             margin-top: 10px;
@@ -106,9 +113,28 @@
        {
         cursor: pointer;
        }
+    .latter-page input
+    {
+           background-color:#d1d1d1; 
+           height: 22px;
+          min-width:14%;
+    }
+    .latter-page select
+    {
     
-   
+        height: 29px;
+        width:83px;
+    }
+   .salary-group input 
+   {
+    background-color: #d1d1d1;
+     height: 22px;
+     
+     min-width:14% ;
+
+   }
 }
+
 </style>
 <body>
      <form action="/submit-admission" method="post">
@@ -116,8 +142,8 @@
      <div  class=heading style="text-align: center;"><hr>
         <img src="philbond.jpeg">
         <img src="philbond2.jpeg"><hr>
-         <label><strong><h2>PHILBOND COMPANY LTD.</h2></strong></label>
-         <h6>Please fill in the form below to become a member!</h6>
+         <label><strong><h2>PHILBOND COMPANY LTD</h2></strong></label>
+         <h5>Please fill in the form below to become a member!</h5>
      </div><hr>
       
           <div class="form-group">
@@ -143,17 +169,17 @@
             
             <div class="form-group">
                 <label for="pro-lang">Programming Languages</label>
-            </div>
+            
 
-            <div class="radio-group">
+            <div class="checkbox-group">
                 <input type="checkbox" value="1" id="JavaScript" name="pro-lang" required> 
                 <label for="pro-lang">JavaScript</label>
 
             
                   <input type="checkbox" value="2" id="Java" name="pro-lang">
-                  <label for="pro-lang">Java</label>
+                  <label for="pro-lang">Java</label><br>
              
-                  <input type="checkbox" value="3" id="Python" name="pro-lang">
+                  <input type="checkbox" value="3" id="Python" name="pro-lang" >
                   <label for="pro-lang">Python</label>
 
                  <input type="checkbox" value="4" id="PHP" name="pro-lang">
@@ -163,14 +189,14 @@
                   <label for="pro-lang">Swift</label>
 
                    <input type="checkbox" value="6" id="Flutter" name="pro-lang">
-                  <label for="pro-lang">Flutter</label>
+                  <label for="pro-lang">Flutter</label><br>
 
                    <input type="checkbox" value="7" id="Typescript" name="pro-lang">
                   <label for="pro-lang">Typescript</label>
 
                    <input type="checkbox" value="8" id="ReactNative" name="pro-lang">
                   <label for="pro-lang">ReactNative</label>
-             </div><br>
+             </div></div>
 
              <div class="form-group">
                 <label for="exp">Experience Level</label><br>
@@ -199,8 +225,8 @@
             </div>
                
             <div class="form-group">
-                <label for="work_mode">Preferred Work Mode</label><br>
-            </div>
+                <label for="work_mode">Preferred Work Mode</label>
+            
 
             <div class="radio-group">
                 <input type="radio" value="remote" id="mode-remote" name="work_mode" required> 
@@ -208,7 +234,7 @@
                 
                 <input type="radio" value="onsite" id="mode-onsite" name="work_mode" > 
                 <label for="pro-lang">Onsite</label>
-            </div><br>
+            </div></div>
 
            <div class="form-group">
             <div class="name-inputs">
@@ -223,23 +249,20 @@
             <input type="file" name="education" accept=".pdf,.docx, .jpg" required><br>
 
            </div>
-           <div class="form-group">
+           <div class="salary-group">
             <label for="sal_range"> Expected Salary Range</label><br>
-            <input type="number" id="sal_range" placeholder="Min (GHS)" maxlength="5" min="2000" step="100" max="4000"
-             style="background-color: #d1d1d1; height: 22px;width:89px;" required>
-            <input type="number" id="sal_range" placeholder="Max (GHS)" min="5000" maxlength="5"  step="100" max="20000"
-             style="background-color: #d1d1d1; height: 22px;width:89px;" required>
-
+            <input type="number" id="sal_range" placeholder="Min (GHS)" maxlength="5" min="2000" step="100" max="4000" required>
+            <input type="number" id="sal_range" placeholder="Max (GHS)" min="5000" maxlength="5"  step="100" max="20000" required>
+             
 
            </div>
 
-           <div class="form-group">
+           <div class="latter-page">
                 <label for="not_period">Notice Period</label><br>
-                <input type="number" id="not_period" name="notice-period" min="1"  max="30"
-                style="background-color:#d1d1d1; height: 22px;width:59px;" required>
-                <select name="notice-period" id="not_period" style="width: 129px; height: 29px;" required>
+                <input type="number" id="not_period" name="notice-period" min="1"  max="30" required>
+                <select name="notice-period" id="not_period"  required>
                     <option value="days">Days</option>
-                    <option value="weeks">Weeks</option>
+                    <option value="weeks">Weeks</option>     
                     <option value="month">Month</option>
                 </select>
 

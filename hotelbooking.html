@@ -41,8 +41,8 @@
     box-sizing: border-box;
     border: 1px solid #777; 
     border-radius: 8px; 
-  font: sans-serif;
-            
+    font: sans-serif;
+     padding: 20px;
 }
      button {
             text-align:center;
@@ -98,14 +98,19 @@
     height:28px;
 }
 
-.room-part select,.room-part input
+.room-part select
 {
  width:28%;
  height: 30px;
 }
+.room-part input
+{
+    width:27% ;
+    height: 30px;
+}
 span
 {
-margin-left: 38%;
+margin-left: 35%;
 }
 
 }
@@ -115,7 +120,7 @@ margin-left: 38%;
     
 </style>
 <body>
-    <forms action="" method="POST">
+    <forms action="submit-admission" method="POST">
     
     <div class="form-container"> 
         <hr>
@@ -167,7 +172,7 @@ margin-left: 38%;
              </select>
              <br>
              <label style="color: aqua;">Date </style>
-                 <span style="color: aqua; ">Hour/Minutes</style>
+                 <span style="color: aqua; ">Time</style>
                      </label></div>
             <br><br>
 

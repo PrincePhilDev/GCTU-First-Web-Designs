@@ -11,10 +11,11 @@
 </head>
 
 <style>
+     @media screen and (min-width: 100px) {
   body{
         display: flex;
         background-color:#3F2A56;
-         background-image: radial-gradient(whitesmoke,#3F2A56);
+         background-image: radial-gradient(#7b5ea0,#3F2A56);
     justify-content: center;
     align-items: center;
      width: 100%;
@@ -25,6 +26,13 @@
       color:#C6F918;
       font: sans-serif;
       
+    }
+    .form-container img 
+    {
+          width:45% ;
+            max-width: 48%; 
+            height: auto;
+            
     }
 
 .form-container {
@@ -37,6 +45,7 @@
     box-sizing: border-box;
     border: 1px solid #777; 
     border-radius: 8px; 
+    padding: 20px;
   font: sans-serif;
             
 }
@@ -48,7 +57,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            width: 200px;
+            width: 32%;
             font-size: 13px;
             margin-top: 10px;
             height: 45px;
@@ -61,9 +70,10 @@
     select{
         background-color: #F9F9F9; box-sizing: border-box;
     }
+}
 </style>
 <body>
-    <forms action="" method="POST">
+    <forms action="submit-admission" method="POST">
         <div class="form-container">
     <div style="text-align: center;">
     <label for="title" style="font-size: 30px; ">
@@ -71,8 +81,8 @@
     </label>
     <br><br>
 <hr>
-    <img src="shoppingimg.jpeg" style="height: 150px; width: 200px;">
-     <img src="shoppingimg2.png" style="height:150px; width: 200px;">
+    <img src="shoppingimg.jpeg" >
+     <img src="shoppingimg2.png" >
      <hr>
      <h6>  Please fill out this form to sell on our platform. </h6>
     </div>
