@@ -13,55 +13,73 @@
 <style>
     
     
+    @media screen and (min-width:100px){
+         
    body {
-            background-color:#2C3E50;
-             background-image: radial-gradient(whitesmoke,#2C3E50);
+            background-color:#6c8baf;
+            background-image: radial-gradient(#6c8baf,#28435f);
              display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             
         }
-        .form-container img {
-    max-width: 100%; 
-    height: auto;    
-}
-        .form-container {
-  background-color:#34495E;
-    display: inline-block;
-     max-width: 700px;
-     width: 100%;
-    margin-left:auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    font: sans-serif;
-    border: 1px solid #CCCCCC; 
-    border-radius: 8px; 
+        .form-container img 
+        {
+            width:200px ;
+            height: 90px;
+            max-width: 48%; 
+            height: auto;    
+        }
+
+        .form-container
+         {
+            background-color:#40556b;
+            display: inline-block;
+            max-width: 700px;
+            width: 100%;
+            margin-left:auto;
+            margin-right: auto;
+            box-sizing: border-box;
+            font: sans-serif;
+            border: 1px solid #777; 
+            border-radius: 8px; 
   
         }
-    h2  {
+
+         h2  
+        {
         color:#3498DB;
         }
-    input[type="text"],input[type="tel"],input[type="url"],
-    select
+
+         input[type="text"],input[type="tel"],input[type="url"],select
+    
         {
-         width: 197px;
-         height: 30px;
-         background-color:#8a9cad;
-         max-width: 500px;
-          box-sizing: border-box;
+            width: 394px;
+             height: 30px;
+             background-color:#d1d1d1;
+            max-width: 500px;
+            box-sizing: border-box;
         }
+        
+        .name-inputs input
+        {
+            width:195px;
+        }
+
     label
         {
             font: sans-serif;
             font-size:17px;
             color: gold;
         }
+
     .form-group
         {
             margin-bottom: 15px;
             
         }
+
     .radio-group label
         {
             color: black;
@@ -79,6 +97,7 @@
             border-radius: 4px;
             cursor: pointer;
             width: 25%;
+            margin-left: 10px;
             font-size: 13px;
             margin-top: 10px;
             box-sizing: border-box;
@@ -87,32 +106,38 @@
        {
         cursor: pointer;
        }
+    
+   
+}
 </style>
 <body>
      <form action="/submit-admission" method="post">
         <div class="form-container">
      <div  class=heading style="text-align: center;"><hr>
-        <img src="philbond.jpeg" height="90px" width="170px">
-        <img src="philbond2.jpeg" height="90px" width="170px"><hr>
+        <img src="philbond.jpeg">
+        <img src="philbond2.jpeg"><hr>
          <label><strong><h2>PHILBOND COMPANY LTD.</h2></strong></label>
          <h6>Please fill in the form below to become a member!</h6>
      </div><hr>
       
           <div class="form-group">
+            <div class="name-inputs">
               <label for="name">Name </label><br>
                  <input type="text" id="name" placeholder="First"  required>
                 <input type="text" id="name" placeholder="Last" required>
+                  </div>
                 </div>
 
             <div class="form-group">
-                <label for="e-mail">E-mail Address<br></label>
-                <input type="text" id="e-mail" placeholder="ex:Princephil@gmail.com" required style="width: 400px;">
-
+                
+                    <label for="e-mail">E-mail Address<br></label>
+                    <input type="text" id="e-mail" placeholder="ex:Princephil@gmail.com" required >
+              
             </div>
 
             <div class="form-group">
                 <label for="phone">Phone number</label><br>
-                <input type="tel" id="phone" placeholder="### ### ####"  maxlength="10" style="width: 400px" required>
+                <input type="tel" id="phone" placeholder="### ### ####"  maxlength="10"  required>
 
             </div><hr>
             
@@ -149,7 +174,7 @@
 
              <div class="form-group">
                 <label for="exp">Experience Level</label><br>
-                <select name="Experience_level" id="exp"style="width: 403px; height: 29px;" required>
+                <select name="Experience_level" id="exp" required>
                 <option value="">--Select a level--</option>
                 <option value="junior">Junior</option>
                 <option value="mid_level">Mid-Level</option>
@@ -159,13 +184,13 @@
             </div>
             <div class="form-group">
                 <label for="port-link">Portfolio/GitHub  Link</label><br>
-                <input type="url" name="port-link" id="port-link" style="width: 403px;" required>
+                <input type="url" name="port-link" id="port-link"  required>
 
             </div><hr>
 
             <div class="form-group">
                 <label for="availability">Availability</label><br>
-                <select name="availability" id="availability" style="width:403px; height: 29px;" required>
+                <select name="availability" id="availability" required>
                     <option value="">--Select an option--</option>
                     <option value="full_time">Full time</option>
                     <option value="part_time">Part time</option>
@@ -186,10 +211,11 @@
             </div><br>
 
            <div class="form-group">
+            <div class="name-inputs">
                 <label for="location">Location</label><br>
                  <input type="text" id="location" placeholder="Country"  required>
                 <input type="text" id="location" placeholder="City" required>
-
+                </div>
            </div><hr>
 
            <div class="form-group">
@@ -200,9 +226,9 @@
            <div class="form-group">
             <label for="sal_range"> Expected Salary Range</label><br>
             <input type="number" id="sal_range" placeholder="Min (GHS)" maxlength="5" min="2000" step="100" max="4000"
-             style="background-color: #8a9cad; height: 22px;width:89px;" required>
+             style="background-color: #d1d1d1; height: 22px;width:89px;" required>
             <input type="number" id="sal_range" placeholder="Max (GHS)" min="5000" maxlength="5"  step="100" max="20000"
-             style="background-color: #8a9cad; height: 22px;width:89px;" required>
+             style="background-color: #d1d1d1; height: 22px;width:89px;" required>
 
 
            </div>
@@ -210,7 +236,7 @@
            <div class="form-group">
                 <label for="not_period">Notice Period</label><br>
                 <input type="number" id="not_period" name="notice-period" min="1"  max="30"
-                style="background-color:#8a9cad; height: 22px;width:59px;" required>
+                style="background-color:#d1d1d1; height: 22px;width:59px;" required>
                 <select name="notice-period" id="not_period" style="width: 129px; height: 29px;" required>
                     <option value="days">Days</option>
                     <option value="weeks">Weeks</option>
