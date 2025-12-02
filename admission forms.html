@@ -19,27 +19,28 @@
         background-color: #FFFFFF;
     justify-content: center;
     align-items: center;
-    padding: 30px;
     min-height: 100vh;
  }
 
    label,h1,h4,h3{
-      color:#000080;
+      color:#4e4efd;
       font: sans-serif;
+      font-weight: bold;
+      font-size: 18px;
       
     }
 
 .form-container {
   background-color: #F0F8FF;
     display: inline-block;
-     max-width: 700px;
-     width:100%;
+     width: 100%;
+     max-width:700px;
     margin-left:auto;
     margin-right: auto;
     box-sizing: border-box;
     border: 1px solid #CCCCCC; 
     border-radius: 8px; 
-  padding: 30px;
+  padding: 10px;
             
   }
    button {
@@ -56,61 +57,107 @@
             height: 40px;
             box-sizing: border-box;
         }
+        input,select
+            {
+                border-radius: 6px;
+                 border-top-style: hidden;
+          border-left: hidden; 
+          border-right: hidden;
+            }
+        .name-inputs input
+        {
+          width:35% ;
+          height: 30px;
+          min-width:90px ;
+        }
+        .other-inputs select
+        {
+          width:35%;
+          height:32px;
+             min-width:130px ;
+        }
+      
+       .other-inputs input[type="date"]
+        {
+          width:35%;
+          height:32px;
+             min-width:130px ;
+        }
+        .other-inputs input[type="text"]
+        {
+          width: 72% ;
+          height: 30px;
+             min-width:183px ;
+        }
+        .other-inputs input[type="tel"]
+        {
+          width:35%;
+          height:32px;
+             min-width:90px ;
+        }
       }
+
     </style>   
   </div>
      <body>
     <forms action="" method="POST">
       <div class="form-container">
       <h2>Admission Application Form</h2>
-      <label for="name"> Student's Name:</label><br>
-        <input type="text"  id="name" placeholder="First" required style="width: 147px;">
-    <input type="text"  id="name" placeholder="Last" style="width: 147px;" required>
-
+      <div class="name-inputs">
+      <label for="name"> Student's Name:</label><br><br>
+        <input type="text"  id="name" placeholder="First" required >
+    <input type="text"  id="name" placeholder="Last"  required>
+        </div>
     <br><br>
-    
-      <label for="course"> Course:</label><br>
-        <select name="course" id="course" style="width: 315px;">
+    <div class="other-inputs">
+      <label for="course"> Course:</label><br><br>
+        <select name="course" id="course" >
           <option >--Select a course--</option required>
          <option >Computer Science</option>
-          <option >Information Technology</option>
+          <option >Cyber Security</option>
            <option >Law</option>
         </select>
      <br>
-     <br>
+     <br><br>
       
-      <label for="dob"> Date Of Birth:</label><br>
-        <input type="date" id="dob" style="width: 310px;" required>
-      
+      <label for="dob"> Date Of Birth:</label><br><br>
+        <input type="date" id="dob" required>
+      </div>
       <br>
       <br>
-      <label for="Pname"> Parent/Guardian Name:</label><br>
-        <input type="text" id="Pname" placeholder="First" style="width:147px;" required>
-           <input type="text" id="Pname" placeholder="Last" style="width:147px;" required>
-    
+       <div class="name-inputs">
+      <label for="Pname"> Parent/Guardian Name:</label><br><br>
+        <input type="text" id="Pname" placeholder="First"  required>
+           <input type="text" id="Pname" placeholder="Last" required>
+    </div>
       <br>
       <br>
-      <label for="address"> Current Address:</label><br>
-        <input type="text" id="address" placeholder="Street Address" style="width: 304px;"required>
+       <div class="other-inputs">
+      <label for="address"> Current Address:</label><br><br>
+        <input type="text" id="address" placeholder="Street Address"required>
         <br>
         <br>
-        <input type="text" id="address" placeholder="Street Address Line 2" style="width: 304px"; >
+        <input type="text" id="address" placeholder="Street Address Line 2" ; >
+        </div>
         <br>
         <br>
-        <input type="text" id="address" placeholder="Postal/Zip Code" style= "width: 147px">
-        <input type="text" id="address" placeholder="Country" style="width: 147px;">
+         <div class="name-inputs">
+        <input type="text" id="address" placeholder="Postal/Zip Code">
+        <input type="text" id="address" placeholder="Country">
+        </div>
  <br>
  <br>
-      
-      <label for="phone"> Phone:</label><br>
-        <input type="tel" id="phone" placeholder="### ### ####" style="width:305px;" maxlength="10" required>
+       <div class="other-inputs">
+      <label for="phone"> Phone:</label><br><br>
+        <input type="tel" id="phone" placeholder="### ### ####"  maxlength="10" required>
         <br>
-        <br>
-      
-      <label for="email">Email:</label><br>
-        <input type="text" id="email" placeholder="ex:Princephil@gmail.com" style="width: 305px;"required>
         <br><br>
+      
+      <label for="email">Email:</label><br><br>
+        <input type="text" id="email" placeholder="ex:Princephil@gmail.com" required>
+        <br><br><br>
          <button type="submit">Submit Application</button>
+         </div>
         </div>
     </forms>
   </body>
